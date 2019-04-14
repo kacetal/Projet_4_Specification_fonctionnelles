@@ -1291,7 +1291,7 @@ Sur la **Figure 5** ci-dessous on voit le cycle de vie d’une commande qui comm
 
 
 *   **“Liste de menu”** Le cycle de vie commence par le chargement la list de menu disponible par le client.
-    *   **“Choisir un menu” **L’utilisateur choisit un menu et il en ajoute dans son panier.
+    *   **“Choisir un menu”** L’utilisateur choisit un menu et il en ajoute dans son panier.
 *   L’état **“Commande en cours de création”** le client a déjà remplit le panier, mais il ne l’est pas encore validé.
     *   **“Annulé par client”** Le client peut annuler sa commande, et terminer sa session.
     *   **“Valider un panier”** Le client valide la commande pour passer à l’état suivant.
@@ -1299,7 +1299,7 @@ Sur la **Figure 5** ci-dessous on voit le cycle de vie d’une commande qui comm
     *   **“Paiement accepté”** Le paiement a été acceptée par le système bancaire et la commande peut changer son état.
     *   **“Paiement non accepté”** Si le paiement n’est pas acceptée la commande passe en état “Commande annulée”.
 *   L’état **“Commande payée”**, la commande payée en attend l’acceptation par le cuisinier.
-    *   **“Préparation” **Cuisinier est accepté la commande et le système envoie le message à client que sa commande “EN PRÉPARATION”
+    *   **“Préparation”** Cuisinier est accepté la commande et le système envoie le message à client que sa commande “EN PRÉPARATION”
 *   L’état **“Commande en préparation”**, la commande qui était acceptée par le cuisinier, elle en cours de préparation.
     *   **“Mise en attente”** À la fin de préparation le cuisinier dispose la commande en stock d'attente.
 *   L’état **“Commande en stock”** pour les commandes préparée qui attendent la livraison ou récupération par client.
@@ -1312,7 +1312,7 @@ Sur la **Figure 5** ci-dessous on voit le cycle de vie d’une commande qui comm
 *   L’état **“Commande livrée”** La commande qui été livrée et elle peut être terminée.
     *   **“Donnée par livreur”** La commande est terminée par la livraison accompli par le livreur.
 *   L’état **“Commande non livrée”** La commande qui n'était pas livrée.
-    *    **“Retour au stock” **La commande non livrée repart au stock d’attente, pour pouvoir d’être recuperer par le client ou par le livreur deuxième fois.
+    *    **“Retour au stock”** La commande non livrée repart au stock d’attente, pour pouvoir d’être recuperer par le client ou par le livreur deuxième fois.
 *   L’état **“Commande annulée”** La commande qui était annulée.
 
 
