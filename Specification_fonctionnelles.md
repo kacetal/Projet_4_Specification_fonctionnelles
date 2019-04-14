@@ -1,56 +1,37 @@
-<!----- Conversion time: 8.487 seconds.
+# Spécification fonctionnelles
+
+# Analysez les besoins de votre client pour son groupe de pizzerias.
+
+# Table of Contents
+- [1. Contexte du logiciel](#1-contexte-du-logiciel)
+    - [1.1 Contexte et objectif du système](#11-contexte-et-objectif-du-système)
+    - [1.2 Acteurs](#12-acteurs)
+- [2. Différentes parties du système](#2-différentes-parties-du-système)
+- [3. Description des fonctionnalités](#3-description-des-fonctionnalités)
+    - [3.1 Principales fonctionnalités du système](#31-principales-fonctionnalités-du-système)
+    - [3.2 Acteurs principaux](#32-acteurs-principaux)
+    - [3.3 Acteurs secondaires](#33-acteurs-secondaires)
+    - [3.4 Descriptions des grandes fonctionnalité (cas d’utilisation)](#34-descriptions-des-grandes-fonctionnalité-cas-dutilisation)
+- [4. Fiches descriptives des fonctionnalités principales.](#4-fiches-descriptives-des-fonctionnalités-principales)
+    - [4.1 Fiche descriptive de cas d’utilisation «S'inscrire»](#41-fiche-descriptive-de-cas-dutilisation-sinscrire)
+    - [4.2 Diagramme de séquence du cas d’utilisation «S'inscrire»](#42-diagramme-de-séquence-du-cas-dutilisation-sinscrire)
+    - [4.3 Fiche descriptive du cas d’utilisation «Commander une pizza»](#43-fiche-descriptive-du-cas-dutilisation-commander-une-pizza)
+    - [4.4 Diagramme de séquence du cas d’utilisation «Commander une pizza»](#44-diagramme-de-séquence-du-cas-dutilisation-commander-une-pizza)
+    - [4.5 Fiche descriptive du cas d’utilisation «Préparer une commande»](#45-fiche-descriptive-du-cas-dutilisation-préparer-une-commande)
+    - [4.6 Diagramme de séquence du cas d’utilisation «Préparer une commande»](#46-diagramme-de-séquence-du-cas-dutilisation-préparer-une-commande)
+    - [4.7 Fiche descriptive du cas d’utilisation «Livrer une commande»](#47-fiche-descriptive-du-cas-dutilisation-livrer-une-commande)
+    - [4.8 Diagramme de séquence du cas d’utilisation «Livrer une commande»](#48-diagramme-de-séquence-du-cas-dutilisation-livrer-une-commande)
+    - [4.9 Règles fonctionnelles du système pour les utilisateurs de pizzeria.](#49-règles-fonctionnelles-du-système-pour-les-utilisateurs-de-pizzeria)
+- [5 Cycle de vie d’une commande](#5-cycle-de-vie-dune-commande)
+    - [5.1 Diagramme d'états-transition](#51-diagramme-détats-transition)
+- [6 Flux de travail de pizzeria (Diagramme d’activités)](#6-flux-de-travail-de-pizzeria-diagramme-dactivités)
 
 
-Using this Markdown file:
+## 1. Contexte du logiciel
 
-1. Cut and paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
+### 1.1 Contexte et objectif du système
 
-Conversion notes:
-
-* Docs to Markdown version 1.0β17
-* Sat Apr 13 2019 14:57:41 GMT-0700 (PDT)
-* Source doc: https://docs.google.com/open?id=1lXHZ1iBkL7PCJhOqaEkAvFKfHsxdbqxyDU7UjZ2Ple4
-* This is a partial selection. Check to make sure intra-doc links work.
-* This document has images: check for >>>>>  gd2md-html alert:  inline image link in generated source and store images to your server.
------>
-
-
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 0; ALERTS: 9.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
-
-<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
-<a href="#gdcalert2">alert2</a>
-<a href="#gdcalert3">alert3</a>
-<a href="#gdcalert4">alert4</a>
-<a href="#gdcalert5">alert5</a>
-<a href="#gdcalert6">alert6</a>
-<a href="#gdcalert7">alert7</a>
-<a href="#gdcalert8">alert8</a>
-<a href="#gdcalert9">alert9</a>
-
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
-
-
-**Analysez les besoins de votre client pour son groupe de pizzerias.**
-
-
-    **Table de matières**
-
-
-
-1. 
-Contexte du logiciel
-
-
-    1. 
-Contexte et objectif du système
 **“OC Pizza”** est un jeune groupe de pizzeria en plein essor et spécialisé dans les pizzas livrées ou à emporter. Il compte déjà 5 points de vente et prévoit d’en ouvrir au moins trois de plus d’ici la fin de l’année. Un des responsables du groupe a pris contact avec vous afin de mettre en place un système informatique, déployé dans toutes les pizzerias et qui lui permettrait notamment :
-
-
-
 *   d’être plus efficace dans la gestion des commandes, de leur réception à leur livraison en passant par leur préparation;
 *   de suivre en temps réel les commandes passées et en préparation;
 *   de suivre en temps réel le stock d’ingrédients restants pour savoir quelles pizzas sont encore réalisables ;
@@ -62,23 +43,13 @@ Contexte et objectif du système
 
 La figure ci-dessous sert à délimiter le contour du système en cours d'étude, et définir clairement ses frontières et les acteurs avec lesquels il communique. Ces derniers peuvent être soient des acteurs humaines ou non-humaines, soient d'autres systèmes avec lequel le futur système communique.
 
+![Diagramme de context](diagrammes/Diagramme-de-context.jpg)
 
+            Figure 1: Diagramme de contexte
 
+Dans la **Figure 1** on constate qu’il existe 7 acteurs humaines et non-humaines qui interagissent avec le système (Le site internet de commande de pizza).
 
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Sp-cification-fonctionnelles0.jpg). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Sp-cification-fonctionnelles0.jpg "image_tooltip")
-
-
-
-            _Figure 1: Diagramme de contexte_
-
-Dans la **figure 1** on constate qu’il existe 7 acteurs humaines et non-humaines qui interagissent avec le système (Le site internet de commande de pizza). 
-
-
-
-    2. Acteurs
+### 1.2 Acteurs
 
 **Les acteurs principaux:**
 
@@ -93,33 +64,20 @@ Dans la **figure 1** on constate qu’il existe 7 acteurs humaines et non-humain
 
 **Les acteurs secondaires:**
 
-
-
 *   **Le système bancaire** (l'acteur non-humaine) est nécessaire pour pouvoir payer une commande en ligne.
 
 
 
-1. 
-Différentes parties du système
+## 2. Différentes parties du système
 Le système est découpé en quatre packages principales dont chacun représente sa propre partie du système.
 
-Le diagramme de package de la **figure 2** permet de décomposer le système en catégories ou parties plus facilement observables, appelés ”packages”. Cela permet également d’indiquer les acteurs qui interviennent dans chacun des packages.
+Le diagramme de package de la **Figure 2** permet de décomposer le système en catégories ou parties plus facilement observables, appelés ”packages”. Cela permet également d’indiquer les acteurs qui interviennent dans chacun des packages.
 
+![Diagramme de package](diagrammes/Diagramme-de-package.jpg)
 
-
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Sp-cification-fonctionnelles1.jpg). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Sp-cification-fonctionnelles1.jpg "image_tooltip")
-
-
-
-_Figure 2: diagramme de package_
+        Figure 2: Diagramme de package
 
 Dans la figure précédent, nous voyons que le logiciel que nous concevons peut être divisé en quatre parties (ou packages) observables séparément:
-
-
 
 *   La partie **Gestion de la commande** contient l’inscription des nouveaux utilisateurs et la cycle de vie de la commande. Elle initialize aussi la commande.
 *   La partie **Gestion de la préparation** contient la fonctionnalité pour préparer la commande.
@@ -129,58 +87,56 @@ Dans la figure précédent, nous voyons que le logiciel que nous concevons peut 
     *   La sous-partie **Gestion de la statistique** contient les position mieux vendu et les chiffres d’affaires.
     *   La sous-partie **Gestion du paiement** gère éventuellement le paiement en-ligne.
 *   La boîte **“Pizzeria”** qui entoure les packages (la boîte bleue) correspond au système (c’est-à-dire le logiciel) qui est analysé.
-2. Description des fonctionnalités
-    1. Principales fonctionnalités du système
 
-Le système de gestion de pizzeria contient plusieurs fonctionnalités. Les principales fonctionnalités sont présentées à travers un diagramme de cas d’utilisation qui représente les fonctionnalités (ou dit cas d’utilisation) nécessaires aux utilisateurs et les acteurs qui interagissent avec leurs fonctionnalités. Elle est illustrée dans la **figure 3**.
+## 3. Description des fonctionnalités
 
+### 3.1 Principales fonctionnalités du système
 
+Le système de gestion de pizzeria contient plusieurs fonctionnalités. Les principales fonctionnalités sont présentées à travers un diagramme de cas d’utilisation qui représente les fonctionnalités (ou dit cas d’utilisation) nécessaires aux utilisateurs et les acteurs qui interagissent avec leurs fonctionnalités. Elle est illustrée dans la **Figure 3**.
 
+![Diagramme de cas d’utilisation](diagrammes/Diagramme-de-cas-d-utilisation.jpg)
 
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Sp-cification-fonctionnelles2.jpg). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+        Figure 3 : diagramme de cas d’utilisation
 
+### 3.2 Acteurs principaux
 
-![alt_text](images/Sp-cification-fonctionnelles2.jpg "image_tooltip")
-
-
-
-_Figure 3 : diagramme de cas d’utilisation_
-
-
-
-    2. Acteurs principaux
 *   **Visiteur** est un acteur principal qui n'est pas encore enregistré, chaque usager du système et défini comme “Utilisateur” lors de sa première visite sur le site. Il peut **s’inscrire** ou éventuellement **choisir un menu** pour commander en ligne, mais il ne peut pas le commander sans l’inscription.
 *   **Client** est un acteur déjà inscrit, il peut **se connecter** sur le site, **choisir un menu** à commander et **effectuer le paiement en ligne** pour sa commande. Après la livraison il recevra la notification de livraison effectuée ou non-effectuée.
 *   **Vendeur** peut recevoir les **commandes par appelle** téléphonique, il est capable de **créer la nouvelle commande** par téléphone en récupérant l’adresse de client, ses menus choisi et **effectué le paiement **sur place ou **par téléphone**.
 *   **Cuisinier** **reçoit la liste** des commandes à préparer, **récupère des produits** nécessaires du stock et également il **change des quantités** des produits restants. Il **prépare des commandes** et à la fin il **envoie le message** au livreur que la commande est prête-à-livrer. Et **mettre** la commande préparée **au stock d'attente**. Et éventuellement il a l'accès aux aides mémoires pour les recettes des pizzas.
 *   **Livreur** **reçoit le message** avec les détailles d’une commande placée en stock d’attente. Il **livre la commande** acceptée. Après une livraison bien effectuée il envoit le **message de confirmation** et éventuellement il **reçoit de l’argent** des clients qui veulent payer à la livraison. Mais si le client est absent, il **remet** la commande **au stock d’attente**.
-*   **Directeur **il ne participe pas au cycle de vie d’une commande. Il peut **voir la statistique** des ventes et **chiffres d'offres** et éventuellement **changer la liste des menus** proposés.
-    3. Acteurs secondaires
+*   **Directeur il ne participe pas au cycle de vie** d’une commande. Il peut **voir la statistique** des ventes et **chiffres d'offres** et éventuellement **changer la liste des menus** proposés.
+
+### 3.3 Acteurs secondaires
+
 *   **<<Système>> Bancaire** reçoit les transactions pour les commandes payer en ligne, et envoie un message de confirmation au système, pour passer à l’étape de préparation.
-    4. Descriptions des grandes fonctionnalité (cas d’utilisation)
+
+### 3.4 Descriptions des grandes fonctionnalité (cas d’utilisation)
+
 *   **Commander une pizza** est un cas d’utilisation qui initialize cycle du vie d’une commande. Il permet de choisir un menu et si nécessaire demander un utilisateur de faire la connection.
-    *   **<<Extend>> Commander sur place** est un cas d’utilisation qui étend le cas précédent, il permet de commander un menu sans faire la connection ou l’inscription.
-    *   **<<Extend>> Commander par téléphone** est un cas d’utilisation qui étend le cas précédent, il permet de commander un menu par appelle téléphonique sans faire la connection ou l’inscription.
-    *   **<<Extend>> Commander en ligne** est un cas d’utilisation qui étend le cas précédent. Il permet de faire la commande en ligne dans ce cas il nécessite faire la connection avant de passer à l’étape de paiement.
-        *   **_<<Include>> Se connecter_** est un cas d’utilisation qui nous permet de se connecter si nous avons déjà inscrit.
-        *   **<<Include>> _Choisir un menu_** permet de remplir le panier en choisissant les menu disponibles. Il ne nécessite pas avoir une inscription ou connection.
-    *   **<<Extend>> Suivre en temps réél** est un cas d’utilisation qui étend le cas précédent, il permet de suivre une commande en temps réel.
-    *   **<<Include>> Payer la commande** est un cas d’utilisation qui nous propose plusieur moyens de paiement, il finalize la commande et l’envoie à l’étape de préparation.
-        *   **<<Extend>> Payer sur place** est un cas d’utilisation qui étend le cas précédent. Il permet de faire un paiement par espèce ou par carte directement au pizzeria, il sert surtout pour les commande sur place.
-            *   **<<Include>> Payer par téléphone **est un cas d’utilisation qui étend le cas précédent. Il permet de faire un paiement par carte en appelant au pizzeria, il sert surtout pour les commande par téléphone.
-        *   **<<Extend>> Payer en ligne** est un cas d’utilisation qui étend le cas précédent. Il permet de régler une commande en ligne en faisant la connexion avec la banque.
+    *   **<<Extend\>> Commander sur place** est un cas d’utilisation qui étend le cas précédent, il permet de commander un menu sans faire la connection ou l’inscription.
+    *   **<<Extend\>> Commander par téléphone** est un cas d’utilisation qui étend le cas précédent, il permet de commander un menu par appelle téléphonique sans faire la connection ou l’inscription.
+    *   **<<Extend\>> Commander en ligne** est un cas d’utilisation qui étend le cas précédent. Il permet de faire la commande en ligne dans ce cas il nécessite faire la connection avant de passer à l’étape de paiement.
+        *   **<<Include\>> Se connecter** est un cas d’utilisation qui nous permet de se connecter si nous avons déjà inscrit.
+        *   **<<Include\>> Choisir un menu** permet de remplir le panier en choisissant les menu disponibles. Il ne nécessite pas avoir une inscription ou connection.
+    *   **<<Extend\>> Suivre en temps réél** est un cas d’utilisation qui étend le cas précédent, il permet de suivre une commande en temps réel.
+    *   **<<Include\>> Payer la commande** est un cas d’utilisation qui nous propose plusieur moyens de paiement, il finalize la commande et l’envoie à l’étape de préparation.
+        *   **<<Extend\>> Payer sur place** est un cas d’utilisation qui étend le cas précédent. Il permet de faire un paiement par espèce ou par carte directement au pizzeria, il sert surtout pour les commande sur place.
+            *   **<<Include\>> Payer par téléphone** est un cas d’utilisation qui étend le cas précédent. Il permet de faire un paiement par carte en appelant au pizzeria, il sert surtout pour les commande par téléphone.
+        *   **<<Extend\>> Payer en ligne** est un cas d’utilisation qui étend le cas précédent. Il permet de régler une commande en ligne en faisant la connexion avec la banque.
 *   **S’inscrire** est un cas d’utilisation qui est responsable de l’inscription. Il gère le processus d'enregistrement pour les nouveaux utilisateurs non-inscrits.
-*   **Préparer une commande** est un cas d’utilisation qui gère la préparation d’une commande après le règlement. Il prévoit le cuisinier par le message envoyé pour qu’il puisse commencer la préparation d’une commande. 
-    *   **<<Include>> Gérer le stock** c’est le cas d'utilisation qui permet de changer la quantité des produit au stock pendant la phase de préparation ou pour le remplissage de stock.
-    *   **<<Include>> Consulter une aide mémoire** est un cas d’utilisation qui aide au cuisinier, il le fait montrer les recettes des pizza en préparation.
-*   **Livrer une commande** est responsable de la dernière phase de cycle de vie d’une commande. Il suive la livraison et envoie le message au client que sa commande est arrivée chez lui. 
+*   **Préparer une commande** est un cas d’utilisation qui gère la préparation d’une commande après le règlement. Il prévoit le cuisinier par le message envoyé pour qu’il puisse commencer la préparation d’une commande.
+    *   **<<Include\>> Gérer le stock** c’est le cas d'utilisation qui permet de changer la quantité des produit au stock pendant la phase de préparation ou pour le remplissage de stock.
+    *   **<<Include\>> Consulter une aide mémoire** est un cas d’utilisation qui aide au cuisinier, il le fait montrer les recettes des pizza en préparation.
+*   **Livrer une commande** est responsable de la dernière phase de cycle de vie d’une commande. Il suive la livraison et envoie le message au client que sa commande est arrivée chez lui.
 *   **Gérer le menu** se permet de changer le menu du pizzeria en dépendant de choix de directeur. Il n’appartient pas au cycle de vie d’une commande.
 *   **Gérer le compte** permet de gérer le mouvement des paiements, voir les produits mieux vendus et les dépenses / revenus générales du pizzeria.
-3. Fiches descriptives des fonctionnalités principales.
-    5. Fiche descriptive de cas d’utilisation «S'inscrire»
+
+## 4. Fiches descriptives des fonctionnalités principales.
+
+### 4.1 Fiche descriptive de cas d’utilisation «S'inscrire»
 
 **Identification:**
-
 
 <table>
   <tr>
@@ -210,7 +166,7 @@ _Figure 3 : diagramme de cas d’utilisation_
   <tr>
    <td><strong>Auteur</strong>
    </td>
-   <td>GORBOUNOV Artem
+   <td>******
    </td>
   </tr>
   <tr>
@@ -233,9 +189,7 @@ _Figure 3 : diagramme de cas d’utilisation_
   </tr>
 </table>
 
-
 **Le dialogue: le scénario nominal**
-
 
 <table>
   <tr>
@@ -258,21 +212,15 @@ _Figure 3 : diagramme de cas d’utilisation_
    <td>2.
    </td>
    <td>Il remplit les données nécessaires:
-<ul>
-
-<li>NOM
-
-<li>PRÉNOM
-
-<li>EMAIL
-
-<li>MOT DE PASSE
-
-<li>ADRESSE
-
-<li>CARTE BANCAIRE (sauvegarde par choix)
-</li>
-</ul>
+    <ul>
+        <li>NOM
+        <li>PRÉNOM
+        <li>EMAIL
+        <li>MOT DE PASSE
+        <li>ADRESSE
+        <li>CARTE BANCAIRE (sauvegarde par choix)
+    </li>
+    </ul>
    </td>
    <td>
    </td>
@@ -303,9 +251,7 @@ _Figure 3 : diagramme de cas d’utilisation_
   </tr>
 </table>
 
-
 **Le dialogue: le scénarios alternatif**
-
 
 <table>
   <tr>
@@ -363,8 +309,7 @@ _Figure 3 : diagramme de cas d’utilisation_
    <td><strong>Fin de scénario alternatif</strong>
    </td>
    <td>Au point 3.1.1 sur décision de l’utilisateur.
-<p>
-Au point 3.1.2 sur décision de système.
+    <p>Au point 3.1.2 sur décision de système.</p>
    </td>
   </tr>
   <tr>
@@ -381,34 +326,20 @@ Au point 3.1.2 sur décision de système.
   </tr>
 </table>
 
-
-
-
-    6. **Diagramme de séquence du cas d’utilisation «S'inscrire»**
+### 4.2 Diagramme de séquence du cas d’utilisation «S'inscrire»
 
 Le diagramme de séquence est la partie de l’aspect fonctionnel qui nommé vue des processus, Il nous permet de décrire les différents scénarios d’utilisation du système, la décomposition du système en processus et actions, les interactions entre les processus, la synchronisation et la communication des activités parallèles.
 
-Sur la **_Figure 4.1_** ci-dessous on voit le processus d’inscription de nouveau utilisateur et ses interactions avec le système et la base des données.
+Sur la **Figure 4.1** ci-dessous on voit le processus d’inscription de nouveau utilisateur et ses interactions avec le système et la base des données.
 
+![Diagramme de séquence du cas d’utilisation “S’inscrire”](diagrammes/Diagramme-de-sequence-de-l_inscription.jpg)
 
-<p style="text-align: right">
-
-
-<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Sp-cification-fonctionnelles3.jpg). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/Sp-cification-fonctionnelles3.jpg" width="" alt="alt_text" title="image_tooltip">
-</p>
-
-
-
-            <p style="text-align: right">
-<em>Figure 4.1 : Diagramme de séquence du cas d’utilisation “S’inscrire”</em></p>
+        Figure 4.1 : Diagramme de séquence du cas d’utilisation “S’inscrire”
 
 
 
 
-    7. **Fiche descriptive du cas d’utilisation «Commander une pizza»**
+### 4.3 Fiche descriptive du cas d’utilisation «Commander une pizza»
 
 **Identification:**
 
@@ -441,7 +372,7 @@ Sur la **_Figure 4.1_** ci-dessous on voit le processus d’inscription de nouve
   <tr>
    <td><strong>Auteur</strong>
    </td>
-   <td>GORBOUNOV Artem
+   <td>******
    </td>
   </tr>
   <tr>
@@ -478,10 +409,11 @@ Sur la **_Figure 4.1_** ci-dessous on voit le processus d’inscription de nouve
    </td>
   </tr>
   <tr>
-   <td>1.
+   <td>
+    1.
    </td>
    <td>
-   </td>
+    </td>
    <td>Il affiche une page contenant les menu disponible.
    </td>
   </tr>
@@ -524,10 +456,8 @@ Sur la **_Figure 4.1_** ci-dessous on voit le processus d’inscription de nouve
    </td>
    <td>Il affiche la page contenant les modes de paiement.
 <ul>
-
 <li>EN LIGNE
-
-<li>À LA LIVRAISON 
+<li>À LA LIVRAISON
 </li>
 </ul>
    </td>
@@ -640,7 +570,7 @@ Sur la **_Figure 4.1_** ci-dessous on voit le processus d’inscription de nouve
    </td>
    <td>
    </td>
-   <td>La banque a refusée la transaction 
+   <td>La banque a refusée la transaction
    </td>
   </tr>
   <tr>
@@ -684,33 +614,15 @@ Au point 9.1.2 sur décision de système.
   </tr>
 </table>
 
+### 4.4 Diagramme de séquence du cas d’utilisation «Commander une pizza»
 
+![Diagramme de séquence du cas d’utilisation “Commander une pizza”](diagrammes/Diagramme-de-sequence-commande-une-pizza.jpg)
 
+        Figure 4.2 : Diagramme de séquence du cas d’utilisation “Commander une pizza”
 
-    8. Diagramme de séquence du cas d’utilisation «Commander une pizza»
-
-Sur la **_Figure 4.2_** ci-dessous on voit le processus d’initialisation de nouvelle commande par le client et ses interactions avec le système, la base des données, la liste des menu disponibles. A la fin de processus le système envoie le message au cuisinier pour commencer la phase de préparation.
-
-
-
-
-<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Sp-cification-fonctionnelles4.jpg). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Sp-cification-fonctionnelles4.jpg "image_tooltip")
-
-
-
-            <p style="text-align: right">
-<em>Figure 4.2 : Diagramme de séquence du cas d’utilisation “Commander une pizza”</em></p>
-
-
-
-
-    9. Fiche descriptive du cas d’utilisation «Préparer une commande»
+### 4.5 Fiche descriptive du cas d’utilisation «Préparer une commande»
 
 **Identification:**
-
 
 <table>
   <tr>
@@ -740,7 +652,7 @@ Sur la **_Figure 4.2_** ci-dessous on voit le processus d’initialisation de no
   <tr>
    <td><strong>Auteur</strong>
    </td>
-   <td>GORBOUNOV Artem
+   <td>******
    </td>
   </tr>
   <tr>
@@ -766,7 +678,6 @@ Sur la **_Figure 4.2_** ci-dessous on voit le processus d’initialisation de no
 
 **Le dialogue: le scénario nominal**
 
-
 <table>
   <tr>
    <td><strong>Étape du scénario</strong>
@@ -781,7 +692,7 @@ Sur la **_Figure 4.2_** ci-dessous on voit le processus d’initialisation de no
    </td>
    <td>
    </td>
-   <td>Il envoie une notification au cuisinier avec les détailles d’une commande. 
+   <td>Il envoie une notification au cuisinier avec les détailles d’une commande.
    </td>
   </tr>
   <tr>
@@ -797,7 +708,7 @@ Sur la **_Figure 4.2_** ci-dessous on voit le processus d’initialisation de no
    </td>
    <td>Il envoie un message au système que la commande “EN PRÉPARATION”.
    </td>
-   <td>Il reconstruit le menu en vertu du stock changé par le cuisinier. 
+   <td>Il reconstruit le menu en vertu du stock changé par le cuisinier.
    </td>
   </tr>
   <tr>
@@ -836,7 +747,6 @@ Sur la **_Figure 4.2_** ci-dessous on voit le processus d’initialisation de no
 
 
 **Le dialogue: le scénarios alternatif**
-
 
 <table>
   <tr>
@@ -889,28 +799,19 @@ Sur la **_Figure 4.2_** ci-dessous on voit le processus d’initialisation de no
 
 
 
-    10. Diagramme de séquence du cas d’utilisation «Préparer une commande»
+### 4.6 Diagramme de séquence du cas d’utilisation «Préparer une commande»
 
-Sur la **_Figure 4.3_** ci-dessous on voit le processus de préparation de nouvelle commande par le cuisinier et ses interactions avec le système et la base des données. A la fin de processus le système envoie le message au client et le livreur (optionnel) pour commencer la phase de livraison.
+Sur la **Figure 4.3** ci-dessous on voit le processus de préparation de nouvelle commande par le cuisinier et ses interactions avec le système et la base des données. A la fin de processus le système envoie le message au client et le livreur (optionnel) pour commencer la phase de livraison.
 
+![Diagramme de séquence du cas d’utilisation “Préparer une commande”](diagrammes/Diagramme-de-sequence-préparer-une-commande.jpg)
 
-
-
-<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Sp-cification-fonctionnelles5.jpg). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Sp-cification-fonctionnelles5.jpg "image_tooltip")
+        Figure 4.3 : Diagramme de séquence du cas d’utilisation “Préparer une commande”
 
 
 
-            _Figure 4.3 : Diagramme de séquence du cas d’utilisation “Préparer une commande”_
+### 4.7 Fiche descriptive du cas d’utilisation «Livrer une commande»
 
-
-
-    11. 
-Fiche descriptive du cas d’utilisation «Livrer une commande»
 **Identification:**
-
 
 <table>
   <tr>
@@ -940,7 +841,7 @@ Fiche descriptive du cas d’utilisation «Livrer une commande»
   <tr>
    <td><strong>Auteur</strong>
    </td>
-   <td>GORBOUNOV Artem
+   <td>******
    </td>
   </tr>
   <tr>
@@ -987,7 +888,7 @@ Fiche descriptive du cas d’utilisation «Livrer une commande»
   <tr>
    <td>2.
    </td>
-   <td>Il accepte la demande de livraison. 
+   <td>Il accepte la demande de livraison.
    </td>
    <td>
    </td>
@@ -1129,28 +1030,18 @@ Fiche descriptive du cas d’utilisation «Livrer une commande»
 
 
 
-    12. Diagramme de séquence du cas d’utilisation «Livrer une commande»
+### 4.8 Diagramme de séquence du cas d’utilisation «Livrer une commande»
 
-Sur la **_Figure 4.4_** ci-dessous on voit le processus de livraison d’une commande au client par le livreur ou par la récupération sa commande par lui-même et leurs interactions avec le système et la base des données. C’est le processus final pour la commande entier.
+Sur la **Figure 4.4** ci-dessous on voit le processus de livraison d’une commande au client par le livreur ou par la récupération sa commande par lui-même et leurs interactions avec le système et la base des données. C’est le processus final pour la commande entier.
 
+![Diagramme de séquence du cas d’utilisation “Livrer une commande”](diagrammes/Diagramme-de-sequence-livrer-une-commande.jpg)
 
-
-
-<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Sp-cification-fonctionnelles6.jpg). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Sp-cification-fonctionnelles6.jpg "image_tooltip")
-
-
-
-            <p style="text-align: right">
-<em>Figure 4.4 : Diagramme de séquence du cas d’utilisation “Livrer une commande”</em></p>
+        Figure 4.4 : Diagramme de séquence du cas d’utilisation “Livrer une commande”
 
 
 
 
-    13. 
-Règles fonctionnelles du système pour les utilisateurs de pizzeria.
+### 4.9 Règles fonctionnelles du système pour les utilisateurs de pizzeria.
 
 <table>
   <tr>
@@ -1385,30 +1276,17 @@ Règles fonctionnelles du système pour les utilisateurs de pizzeria.
   </tr>
 </table>
 
+## 5 Cycle de vie d’une commande
 
+### 5.1 Diagramme d'états-transition
 
-
-4. 
-Cycle de vie d’une commande.
-
-
-    14. 
-Diagramme d'états-transition
 Le diagramme d’état-transition permet de décrire le cycle de vie des objets d’une classe, décrire comment un objet change d'état au cours de son existence, représenter des objets liés à un événement dans un système réactif.
 
-Sur la **_Figure 5_** ci-dessous on voit le cycle de vie d’une commande qui commence par afficher la liste de menu pour un client et qui peut se terminer soit par annulation manuelle par client soit par la préparation et livraison au client ou par la récupération la commande au pizzeria par le client directement.
+Sur la **Figure 5** ci-dessous on voit le cycle de vie d’une commande qui commence par afficher la liste de menu pour un client et qui peut se terminer soit par annulation manuelle par client soit par la préparation et livraison au client ou par la récupération la commande au pizzeria par le client directement.
 
+![Diagramme-etats-transition.jpg](diagrammes/Diagramme-etats-transition.jpg)
 
-
-
-<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Sp-cification-fonctionnelles7.jpg). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Sp-cification-fonctionnelles7.jpg "image_tooltip")
-
-
-
-            _Figure 5 : Diagramme d'états-transition_
+            Figure 5 : Diagramme d'états-transition
 
 
 
@@ -1432,30 +1310,19 @@ Sur la **_Figure 5_** ci-dessous on voit le cycle de vie d’une commande qui co
     *   **“Livraison ratée”** La livraison n’est pas effectuée car le client n’est pas présent.
     *   **“Livraison effectuée”** Le client a pris sa livraison et le livreur envoie le message que la commande est livrée.
 *   L’état **“Commande livrée”** La commande qui été livrée et elle peut être terminée.
-    *   **“Donnée par livreur”** La commande est terminée par la livraison accompli par le livreur. 
+    *   **“Donnée par livreur”** La commande est terminée par la livraison accompli par le livreur.
 *   L’état **“Commande non livrée”** La commande qui n'était pas livrée.
     *    **“Retour au stock” **La commande non livrée repart au stock d’attente, pour pouvoir d’être recuperer par le client ou par le livreur deuxième fois.
 *   L’état **“Commande annulée”** La commande qui était annulée.
 
 
 
-5. 
-Flux de travail de pizzeria (Diagramme d’activités)
+## 6 Flux de travail de pizzeria (Diagramme d’activités)
+
 Le diagramme d’activité représente le déroulement des actions, sans utiliser les objets, il permet de modéliser un processus opérationnels représentés graphiquement pour montrer l'activité de chacune des composantes du système.
 
-La **_Figure 6_** ci-dessous représente flux de travail de pizzeria de l’inscription à la livraison chez le client.
+La **Figure 6** ci-dessous représente flux de travail de pizzeria de l’inscription à la livraison chez le client.
 
+![Diagramme-d_activites.jpg](diagrammes/Diagramme-d_activites.jpg)
 
- 
-
-<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/Sp-cification-fonctionnelles8.jpg). Store image on your image server and adjust path/filename if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/Sp-cification-fonctionnelles8.jpg "image_tooltip")
-
-
-
-            _Figure 6 : Diagramme d’activités_
-
-
-<!-- Docs to Markdown version 1.0β17 -->
+            Figure 6 : Diagramme d’activités
